@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import Movies from '../pages/Movies/Movies';
 import Home from '../pages/Home/Home';
 import { AppBar } from './AppBar/AppBar';
+import Loader from './Loader/Loader';
 
 const Details = lazy(() => import('./Movies/Details/Details'));
 const Cast = lazy(() => import('./Movies/Details/Cast/Cast'));
@@ -12,7 +13,7 @@ export const App = () => {
   return (
     <>
       <AppBar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
