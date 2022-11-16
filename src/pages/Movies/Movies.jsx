@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Form from 'components/Layout/Movies/Form/Form';
-import Wrapper from 'components/Layout/Movies/Wrapper/Wrapper';
+import Form from 'components/Movies/Form/Form';
+import Wrapper from 'components/Movies/Wrapper/Wrapper';
 import { useSearchParams } from 'react-router-dom';
 
 export default function Movies() {
