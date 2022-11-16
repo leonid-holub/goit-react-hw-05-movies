@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import onSearch from 'components/Fetch/Fetch';
 import css from './Wrapper.module.css';
-import defaultPoster from '../../../../../pages/Movies/default_poster.png';
+import defaultPoster from '../../../../pages/Movies/default_poster.png';
 
 const Wrapper = ({ query }) => {
   const [movies, setMovies] = useState([]);
