@@ -1,6 +1,7 @@
 import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
 import onSearch from 'components/Fetch/Fetch';
+import Loader from 'components/Loader/Loader';
 import css from './Details.module.css';
 import defaultPoster from '../../../pages/Movies/default_poster.png';
 
@@ -70,7 +71,7 @@ const Details = () => {
             Reviews
           </Link>
         </div>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
